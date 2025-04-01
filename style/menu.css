@@ -1,0 +1,228 @@
+/********* RESET *********/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/********* BODY *********/
+body {
+    font-family: "Poppins", sans-serif;
+    background: #fff;
+}
+
+/********* SIDEBAR *********/
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background: #fff; /* Fond blanc */
+    transition: width 0.4s;
+    overflow: hidden;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .logo-content {
+    color: #666; /* Texte gris */
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+    background: #f5f5f5; /* Bandeau gris clair */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #666; /* Icônes grises */
+}
+
+.logo-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #666; /* Texte gris */
+}
+
+#btn {
+    font-size: 22px;
+    margin-left: auto;
+    cursor: pointer;
+    color: #666; /* Icône grise */
+}
+
+/********* NAV LIST *********/
+.nav-list {
+    margin-top: 10px;
+}
+
+.nav-list li {
+    position: relative;
+    list-style: none;
+    height: 50px;
+    line-height: 50px;
+    margin: 5px 0;
+}
+
+.nav-list li a {
+    color: #666; /* Texte gris */
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s;
+    padding: 0 20px;
+}
+
+.nav-list li a i {
+    font-size: 20px;
+    min-width: 40px;
+    color: #666666; /* Icônes grises */
+}
+
+.links-name {
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.nav-list li a:hover {
+    background: #f5f5f5; /* Survol gris clair */
+}
+
+.nav-list li a.active {
+    background: #007bff; /* Fond bleu */
+    color: #fff; /* Texte blanc */
+}
+
+.nav-list li a.active i {
+    color: #fff; /* Icônes blanches */
+}
+
+/********* TOOLTIP *********/
+.tooltip {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    transform: translateY(-50%);
+    background: #fff;
+    color: #666;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+    white-space: nowrap;
+}
+
+.nav-list li:hover .tooltip {
+    opacity: 1;
+    pointer-events: auto;
+    top: 50%;
+}
+
+/********* HOME SECTION *********/
+.home-section {
+    position: relative;
+    left: 200px;
+    width: calc(102% - 250px);
+    min-height: 100vh;
+    background: #e2e8f0;
+    transition: left 0.4s;
+    padding: 20px;
+}
+
+/********* MEDIA QUERIES *********/
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 70px;
+    }
+    .home-section {
+        left: 70px;
+        width: calc(100% - 70px);
+    }
+    .nav-list li a .links-name {
+        display: none;
+    }
+    .tooltip {
+        display: none;
+    }
+}
+
+/********* HOME SECTION *********/
+
+.sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.section {
+    background: #fff; /* Fond blanc */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.section h3 {
+    font-size: 1.5rem;
+    color: #333; /* Texte foncé */
+    margin-bottom: 10px;
+}
+
+.section p {
+    font-size: 1rem;
+    color: #666; /* Texte gris */
+    margin-bottom: 20px;
+}
+
+.section .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff; /* Bouton bleu */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.section .btn:hover {
+    background: #0056b3; /* Bouton bleu plus foncé au survol */
+}
+.association-logo {
+    width: 150px; /* Limite la largeur à 150px */
+    height: 150px; /* Limite la hauteur à 150px */
+    object-fit: cover; /* Remplir l'espace sans déformer l'image */
+    border-radius: 10px; /* Optionnel: arrondir les coins de l'image */
+    margin-bottom: 15px; /* Ajouter un espace sous l'image */
+}
+.home-content h2 {
+    text-align: center; /* Centre le titre horizontalement */
+    margin-bottom: 20px; /* Espace sous le titre */
+    background-color: white; /* Fond blanc */
+    padding: 10px; /* Espace autour du texte */
+    border-radius: 10px; /* Bords arrondis */
+    width: fit-content; /* Ajuste la largeur en fonction du texte */
+    margin-left: auto;
+    margin-right: auto; /* Centre le titre sur l'écran */
+    color: #666; /* Couleur gris clair pour le texte */
+    font-family: 'Roboto', sans-serif; /* Applique la police Roboto */
+}
+.large-icon {
+    font-size: 40px;  /* Ajustez la taille de l'icône ici */
+}
+
+
+

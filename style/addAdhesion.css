@@ -1,0 +1,201 @@
+ /* Conteneur principal */
+ .container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: transparent;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Conteneur du formulaire */
+.container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Titre du formulaire */
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Champs de formulaire */
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-field input,
+.input-field select {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.input-field input:focus,
+.input-field select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.input-field input::placeholder,
+.input-field select::placeholder {
+    color: #999;
+}
+
+/* Bouton de soumission */
+.btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Formulaire de téléversement */
+#uploadForm {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #ddd;
+}
+
+#uploadForm input[type="file"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+    margin-bottom: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .title {
+        font-size: 1.25rem;
+    }
+
+    .input-field input,
+    .input-field select {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Conteneur principal */
+.genre-container {
+    margin-bottom: 1.5rem;
+}
+
+.genre-container h3 {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* Conteneur des boutons radio */
+.radio-buttons {
+    display: flex;
+    /* Alignement horizontal */
+    gap: 1rem;
+    /* Espace entre les boutons */
+}
+
+/* Style des boutons radio */
+.radio-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #555;
+}
+.paiement-container{
+    margin-bottom: 1.5rem;
+
+}
+
+.paiement-container h3 {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* Cacher le bouton radio par défaut */
+.radio-button input[type="radio"] {
+    display: none;
+}
+
+/* Style personnalisé du bouton radio */
+.radio-button .radio-custom {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    position: relative;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Style lorsque le bouton est sélectionné */
+.radio-button input[type="radio"]:checked+.radio-custom {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Point intérieur du bouton radio */
+.radio-button .radio-custom::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Afficher le point intérieur lorsque le bouton est sélectionné */
+.radio-button input[type="radio"]:checked+.radio-custom::after {
+    opacity: 1;
+}
+
+/* Effet de survol */
+.radio-button:hover .radio-custom {
+    border-color: #0056b3;
+}
+

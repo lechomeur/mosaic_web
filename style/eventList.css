@@ -1,0 +1,147 @@
+.evenement-container {
+    position: relative;
+    left: 200px;
+    width: calc(102% - 250px);
+    min-height: 100vh;
+    background: #e2e8f0;
+    transition: left 0.4s;
+    padding: 20px;
+    display: flex; /* Utilise Flexbox pour aligner les éléments horizontalement */
+     gap: 15px; /* Espace entre les éléments */
+     flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
+     justify-content: flex-start; /* Évite l'espacement excessif */
+     align-items: flex-start; /* Aligne les éléments en haut */
+
+
+}
+
+.event-link {
+    text-decoration: none; /* Supprime le soulignement du lien */
+    color: inherit; /* Hérite la couleur du texte parent */
+    display: block; /* Fait en sorte que le lien occupe toute la largeur */
+}
+
+.event-container {
+   flex: 1 1 calc(25% - 15px);
+   text-align: center;
+   background-color: white;
+   padding: 10px;
+   border-radius: 5px;
+   color: #666;
+   font-family: 'Roboto', sans-serif;
+   transition: transform 0.2s, box-shadow 0.2s;
+   width: 200px;
+   margin-top: 100px;
+   margin-top: 58px; /* Réduit l’espace en haut */
+}
+
+.event-container:hover {
+    transform: scale(1.05); /* Agrandit légèrement au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+}
+
+.event-date {
+    font-size: 16px;
+    color: #555;
+}
+
+.event-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.event-status {
+    font-size: 14px;
+    color: #888;
+}
+
+.status-terminated {
+    color: red;
+}
+
+h1 {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 10px;
+    width: fit-content;
+    color: #666;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    position: absolute;
+    /*Positionabsoluepourplacerleh1enhaut*/top: 10px;
+    /*Ajustezlapositionenhaut*/left: 50%;
+    /*Centrehorizontalement*/transform: translateX(-50%);
+    /*Centrehorizontalement*/margin: 0;
+
+}
+.add-event-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white; /* Même fond blanc que les événements */
+    border: 2px dashed #ccc; /* Bordure en pointillés */
+    cursor: pointer; /* Curseur en forme de main */
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+    width: 200px; /* Même largeur que les événements */
+    border-radius: 10px; /* Mêmes bords arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Même ombre légère */
+    margin-top: 100px; /* Même marge en haut */
+}
+
+.add-event-container:hover {
+    background-color: #f0f0f0; /* Changement de couleur au survol */
+    transform: scale(1.05); /* Légère animation au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+}
+
+.add-event-container i {
+    font-size: 2rem; /* Taille de l'icône */
+    color: #666; /* Couleur de l'icône */
+    margin-bottom: 10px; /* Espace entre l'icône et le texte */
+}
+
+.add-event-container span {
+    font-size: 1rem;
+    color: #666;
+}.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.consult-button {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.consult-button:hover {
+    background-color: #0056b3;
+}
+
+.delete-form {
+    display: inline;
+}
+
+.delete-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.delete-button:hover {
+    background-color: #cc0000;
+}

@@ -1,0 +1,147 @@
+/* Reset des styles par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f5f5f5; /* Fond gris clair */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container-wrapper {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Ombre plus douce */
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    min-height: 500px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.signin-signup {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-in-form {
+    width: 100%;
+    max-width: 400px;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #444; /* Texte plus foncé */
+}
+
+.input-field {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-field i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-field input:focus {
+    border-color: #007bff; /* Bleu vif au focus */
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background: #007bff; /* Bleu vif */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #0056b3; /* Bleu plus foncé au survol */
+}
+
+.error-message {
+    color: #dc3545; /* Rouge pour les erreurs */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.panels-container {
+    flex: 1;
+    background: #fff; /* Bleu vif */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.panel {
+    text-align: center;
+}
+
+.panel h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.panel p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.panel img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container-wrapper {
+        flex-direction: column;
+    }
+
+    .panels-container {
+        display: none;
+    }
+
+    .signin-signup {
+        padding: 20px;
+    }
+}

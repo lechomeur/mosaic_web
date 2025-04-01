@@ -1,0 +1,432 @@
+/* Style général */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+/* Section principale */
+/* Conteneur du tableau réduit avec défilement vertical */
+.table-container {
+    overflow-x: auto; /* Défilement horizontal si nécessaire */
+    overflow-y: auto; /* Défilement vertical */
+    max-height: 400px; /* Hauteur maximale du tableau */
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid #ddd; /* Optionnel : ajoute une bordure pour mieux délimiter */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+/* Tableau ultra compact */
+table {
+    width: 100%;
+    min-width: 350px; /* Largeur minimale pour éviter la compression */
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+th, td {
+    padding: 4px;
+    font-size: 9px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    max-width: 60px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: sticky; /* Rend les en-têtes fixes lors du défilement */
+    top: 0; /* Positionne les en-têtes en haut */
+    z-index: 1; /* Assure que les en-têtes sont au-dessus des cellules */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .table-container {
+        max-height: 300px; /* Réduire la hauteur sur petits écrans */
+    }
+
+    table {
+        min-width: 900px; /* Largeur minimale pour les petits écrans */
+    }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-section {
+        padding: 15px; /* Réduire l'espacement sur petits écrans */
+    }
+
+    .table-container {
+        display: block; /* Permet le scroll horizontal */
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 900px; /* Réduire la largeur minimale sur petits écrans */
+    }
+}
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    th, td {
+        min-width: 100px;
+    }
+}
+
+/* Formulaire de filtrage */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* Réduit l'espacement entre les éléments */
+    margin-bottom: 10px; /* Réduit la marge sous le formulaire */
+    align-items: center;
+}
+
+label {
+    font-weight: 500;
+    color: #555;
+    font-size: 10px; /* Réduit la taille du texte des labels */
+}
+
+select, input[type="text"] {
+    padding: 6px; /* Réduit le padding des champs de formulaire */
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 10px; /* Réduit la taille de la police des champs de formulaire */
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+select:focus, input[type="text"]:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+button[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 6px 12px; /* Réduit le padding des boutons */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 10px; /* Réduit la taille de la police des boutons */
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.btn-add {
+    background-color: #28a745;
+    color: white;
+    padding: 6px 12px; /* Réduit le padding des boutons */
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 10px; /* Réduit la taille de la police des boutons */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-add:hover {
+    background-color: #218838;
+}
+
+/* Tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #fff;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+th, td {
+    padding: 8px; /* Réduit le padding des cellules */
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: #3c7796;
+    color: white;
+    font-weight: 600;
+    font-size: 10px; /* Réduit la taille de la police des en-têtes */
+    text-transform: uppercase;
+}
+
+tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Icônes d'action */
+.fas {
+    font-size: 14px; /* Réduit la taille des icônes */
+    color: #007BFF;
+    margin: 0 6px; /* Réduit l'espacement autour des icônes */
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.fas.fa-trash-alt {
+    color: #DC3545;
+}
+
+.fas:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+/* Boutons d'action */
+.actions {
+    display: flex;
+    gap: 8px; /* Réduit l'espacement entre les boutons */
+    align-items: center;
+}
+
+/* Message "Aucune adhésion trouvée" */
+td[colspan="12"] {
+    text-align: center;
+    padding: 20px; /* Réduit le padding du message */
+    color: #777;
+    font-size: 14px; /* Réduit la taille de la police */
+}
+
+/* Effet de carte pour les lignes du tableau */
+tr {
+    transition: box-shadow 0.3s ease;
+}
+
+tr:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour les statuts de paiement */
+.paye {
+    color: #28a745;
+    font-weight: 500;
+}
+
+.non-paye {
+    color: #DC3545;
+    font-weight: 500;
+}
+
+.fa-eye {
+    color: #17a2b8; /* Couleur bleu clair pour l'icône "œil" */
+    font-size: 14px; /* Réduit la taille de l'icône "œil" */
+    margin: 0 6px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.fa-eye:hover {
+    color: #138496; /* Couleur plus foncée au survol */
+    transform: scale(1.1); /* Effet de zoom au survol */
+}
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+.search-container input[type="text"] {
+    padding-right: 30px; /* Espace pour l'icône */
+}
+
+.search-container .search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888; /* Couleur de l'icône */
+    cursor: pointer;
+}
+/* Conteneur des icônes */
+.actions-container {
+    display: flex;
+    gap: 15px; /* Espacement entre les icônes */
+}
+
+/* Style des liens */
+.action-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 27px;
+    border-radius: 14%;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    -webkit-border-radius: 14%;
+    -moz-border-radius: 14%;
+    -ms-border-radius: 14%;
+    -o-border-radius: 14%;
+}
+
+/* Style des icônes */
+.action-link img {
+    width: 24px;  /* Taille de l'icône */
+    height: 24px;
+}
+
+/* Icône "Ajouter" (bleu) */
+#addLink {
+    background-color: rgba(0, 123, 255, 0.1); /* Bleu transparent */
+}
+
+/* Icône "Télécharger" (vert) */
+#downloadLink {
+    background-color: rgba(40, 167, 69, 0.1); /* Vert transparent */
+}
+
+/* Effet au survol */
+.action-link:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.editable input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.edit-link, .save-link, .delete-link {
+    cursor: pointer;
+    margin: 0 5px;
+    color: #007bff;
+}
+
+.edit-link:hover, .save-link:hover, .delete-link:hover {
+    color: #0056b3;
+}
+td[title] {
+    position: relative;
+    cursor: pointer;
+}
+
+td[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 14px;
+    z-index: 1000;
+}
+
+/* Style de la modale */
+.upload-modal {
+    display: none; /* Masqué par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    z-index: 1000; /* Au-dessus des autres éléments */
+}
+
+/* Contenu de la modale */
+.modal-contenu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Bouton pour fermer la modale */
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Style du formulaire */
+.upload-form input[type="file"] {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.upload-form button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.upload-form button:hover {
+    background-color: #0056b3;
+}
+
+.attestation-link.disabled {
+    color: gray;
+    /* Couleur grisée pour indiquer que ce n'est pas cliquable */
+    pointer-events: none;
+    /* Désactive le clic */
+    opacity: 0.5;
+    /* Effet atténué */
+}
+/* Conteneur principal pour tout aligner sur une ligne */
+
+
+
+/* Conteneur des graphiques */
+.charts-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 2 colonnes */
+    gap: 20px;
+    flex-grow: 1; /* Les graphiques prennent l'espace restant */
+    margin-top: 15px;
+}
+
+/* Style des cartes des graphiques */
+.chart-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    width: 150px; /* Taille fixe pour éviter que tout s'étire */
+}
+
+/* Canvas des graphiques */
+canvas {
+    width: 100% !important;
+    height: auto !important;
+}
