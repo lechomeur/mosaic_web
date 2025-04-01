@@ -17,55 +17,14 @@ include __DIR__ . '/../view/header.php';
         <div class="container">
             <div class="signin-signup">
                 <!-- Formulaire d'ajout d'adhésion -->
-                <form id="loginForm" action="index.php?controller=adhesion&action=add&association_id=<?= htmlspecialchars($associationId) ?>" method="POST" class="sign-in-form" enctype="multipart/form-data">
-                    <h2 class="title">Ajouter une adhésion</h2>
+                <form id="loginForm" action="index.php?controller=evenement&action=add&association_id=<?= htmlspecialchars($associationId) ?>" method="POST" class="sign-in-form" enctype="multipart/form-data">
+                    <h2 class="title">Ajouter une action</h2>
                     <div class="input-field">
                         <input type="text" name="nom" placeholder="Nom" required>
                         <input type="hidden" name="association_id" id="associationId" value="<?= htmlspecialchars($associationId) ?>">
-                        <input type="text" name="prenom" placeholder="Prénom" required>
-                        <div class="genre-container">
-                            <h3>Genre</h3>
-                            <div class="radio-buttons">
-                                <label class="radio-button">
-                                    <input type="radio" name="genre" value="Homme">
-                                    <span class="radio-custom"></span>
-                                    Homme
-                                </label>
-                                <label class="radio-button">
-                                    <input type="radio" name="genre" value="Femme">
-                                    <span class="radio-custom"></span>
-                                    Femme
-                                </label>
-                                <label class="radio-button">
-                                    <input type="radio" name="genre" value="Autre">
-                                    <span class="radio-custom"></span>
-                                    Autre
-                                </label>
-                            </div>
-                        </div>
-                        <input type="number" name="age" placeholder="Âge" required>
-                        <input type="text" name="mail" placeholder="Email">
-                        <input type="text" name="numero" placeholder="Numéro de téléphone">
+                        <input type="text" name="lieu" placeholder="Nom de l'action" required>
+                        <input type="text" name="lieu" placeholder="Lieu de l'action">
                         <input type="number" name="cotisation" placeholder="Montant de la cotisation">
-                        <div class="paiement-container">
-                            <h3>Moyen de paiement</h3>
-                            <div class="radio-buttons">
-                                <label class="radio-button">
-                                    <input type="radio" name="moyenPaiement" value="Espèce">
-                                    <span class="radio-custom"></span>
-                                    Espèce
-                                </label>
-                                <label class="radio-button">
-                                    <input type="radio" name="moyenPaiement" value="Chèque">
-                                    <span class="radio-custom"></span>
-                                    Chèque
-                                </label>
-                            </div>
-                            <div class="upload-container">
-                                <h2 class="title">Téléverser une attestation</h2>
-                                <input type="file" name="attestation" accept=".pdf,.jpg,.png">
-                            </div> 
-                        </div>
                     </div>
                 <input type="submit" value="Ajouter" class="btn">
                 </form>
